@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @keyframes infiniteScroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-72%);
+        }
+      }
+      .container {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      .horizontal-scrolling-items {
+        display: flex;
+        font-size: 40px;
+        width: 2600px;
+        animation-name: infiniteScroll;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      .horizontal-scrolling-items__item {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="horizontal-scrolling-items">
+        <div class="horizontal-scrolling-items__item">
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>ReactJS</span>
+            <span>Figma</span>
+            <span>Photoshop</span>
+            <span>Premiere Pro</span>
+            <span>Figma</span>
+            <span>Angular</span>
+            <span>Node JS</span>
+          </div>
+        </div>
+
+        <div class="horizontal-scrolling-items__item">
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>ReactJS</span>
+            <span>Figma</span>
+            <span>Photoshop</span>
+            <span>Premiere Pro</span>
+            <span>Figma</span>
+            <span>Angular</span>
+            <span>Node 2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

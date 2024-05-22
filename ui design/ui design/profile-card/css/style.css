@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.image-height{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    
+}
+body{
+    color: #152022;
+    font-family: 'roboto',sans-serif;
+    /* background-color: #E1EDEF; */
+    background-color: #202829;
+}
+.profile-block{
+    display: flex;
+    justify-content: center;
+    padding: 0 115px;
+    flex-wrap: wrap;
+}
+.card{
+    position: relative;
+    width: 320px;
+    height: 360px;
+    text-align: center;
+    margin: 40px 20px 0;
+}
+.card-inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: 1s;
+
+}
+.card-body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 40px;
+}
+.front{
+    background-color: #fff;
+
+}
+.back{
+    background-color: #fff;
+    padding: 40px 20px;
+    transform: rotateY(180deg);
+}
+.title{
+    margin-top: 30px;
+}
+h6{
+    font-size: 16px;
+    color: #94adb1;
+    text-transform: uppercase;
+
+}
+p{
+    font-size: 16px;
+    line-height: 24px;
+}
+.card .front p{
+    margin: 10px 0;
+}
+.card:hover .card-inner{
+    transform: rotateY(180deg);
+    transition: 1s; 
+}
+.card .back p{
+   font-size: 14px;
+   font-weight: 400;
+
+}
+.socialmedia i{
+    display: inline-block;
+    color: #94adb1;
+    border: 1px solid #94adb1;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    margin: 20px 5px 0;
+    transition: all ease 0.5s;
+}
+.socialmedia i:hover{
+    background-color: #94adb1;
+    color: #fff;
+}
+
+/* dark card */
+.card.dark .card-body{
+    background-color: #2f3839;
+}

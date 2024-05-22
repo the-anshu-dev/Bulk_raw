@@ -1,0 +1,138 @@
+.about {
+  background-image: url("assets/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.about__container {
+  position: relative;
+  min-height: 175vh;
+  max-width: 1200px;
+  ;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.about__content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about__content h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 300;
+  color: #f3f4f6;
+}
+
+.about__content h1 span {
+  color: #b45309;
+}
+
+.about__content .start__project {
+  text-decoration: none;
+  margin-top: 2rem;
+  color: #f3f4f6;
+  font-weight: 600;
+  position: relative;
+}
+
+.about__content .start__project::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -120%;
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(to right,
+      #b45309,
+      rgba(0, 0, 0, 0));
+}
+
+.about__cards {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: end;
+}
+
+.about__card {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f3f4f6;
+  height: max-content;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.about__card h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.about__card h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.about__card p {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+@media (min-width: 640px) {
+  .about__container {
+    min-height: 150vh;
+  }
+
+  .about__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about__content h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .about__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 780px) {
+
+
+  .about__container {
+    min-height: 100vh;
+  }
+
+  .about__content h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+
+  .about__cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .about__card {
+    height: 100px;
+  }
+
+  .about__card:hover {
+    height: 250px;
+  }
+}
